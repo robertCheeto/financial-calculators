@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class CertificateOfDeposit {
     public static void main(String[] args) {
         // accept the deposit amount, interest rate, and years from user
@@ -8,6 +10,7 @@ public class CertificateOfDeposit {
         double annualInterestRateDisplay;
         double years;
         int daysPerYear = 365;
+        Scanner keyboard = new Scanner (System.in);
 
 
         System.out.println("*** Welcome to the CD Calculator ***\n");
@@ -19,12 +22,15 @@ public class CertificateOfDeposit {
         System.out.print("Please enter the loan length in years: ");
         years = keyboard.nextDouble();
 
-        double totalNumberDays = daysPerYear * years;
-        double futureValue = principal * (1 + Math.pow((annualInterestRateCalc / daysPerYear), daysPerYear * years));
+        double totalNumberOfDays = daysPerYear * years;
+        double futureValue = principal * (Math.pow(1 + (annualInterestRateCalc / daysPerYear), totalNumberOfDays));
+        double totalInterest = futureValue - principal;
 
         System.out.println();
         // TO-DO: work on SOUT for display message
         // check if calculations are correct
         // determine if any other outputs are needed for CD Calc
+        System.out.printf("If you deposit $%.2f at an interest rate of %.3f%% for %.0f years...", principal, annualInterestRateDisplay, years);
+        System.out.printf("\nYou your final balance would be $%.2f with an interest amount of $%.2f.", futureValue, totalInterest);
     }
 }
