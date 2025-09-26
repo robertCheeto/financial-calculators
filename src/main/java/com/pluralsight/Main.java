@@ -104,8 +104,7 @@ public class Main {
         double months = (years * 12.0);
 
         // annuityValue formula needs updated to show correct results
-        // TO-DO: show monthly payout amount, fix annuityValue formula, add sout/souf display messages for the end result to the user
-        double annuityValue = principal * (1 - Math.pow(1 + annualInterestRateCalculate, (-months)) / annualInterestRateCalculate);
+        double annuityValue = principal * (1 - (Math.pow(1 + annualInterestRateCalculate, (-months))) / annualInterestRateCalculate);
         System.out.printf("The present value of the annuity is: $%.2f", annuityValue);
     } // END annuityCalculator
 
