@@ -92,7 +92,7 @@ public class Main {
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("\n\n*** Welcome to the Annuity Calculator ***");
-        System.out.print("Please enter the present value of the annuity: ");
+        System.out.print("Please enter the monthly payout of the annuity: ");
         principal = keyboard.nextDouble();
 
         System.out.print("Please enter the expected interest rate: ");
@@ -101,12 +101,12 @@ public class Main {
 
         System.out.print("Please enter the amount of years the annuity will pay out for: ");
         years = keyboard.nextDouble();
-        double months = years / 12.0;
+        double months = (years * 12.0);
 
         // annuityValue formula needs updated to show correct results
         // TO-DO: show monthly payout amount, fix annuityValue formula, add sout/souf display messages for the end result to the user
-        double annuityValue = principal * ((1 - Math.pow(1 + annualInterestRateCalculate, (-months)) / annualInterestRateCalculate));
-        System.out.printf("The present value of the annuity is $%.2f", annuityValue);
+        double annuityValue = principal * (1 - Math.pow(1 + annualInterestRateCalculate, (-months)) / annualInterestRateCalculate);
+        System.out.printf("The present value of the annuity is: $%.2f", annuityValue);
     } // END annuityCalculator
 
 
