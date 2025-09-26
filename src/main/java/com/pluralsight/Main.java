@@ -22,7 +22,6 @@ public class Main {
         else {
             System.out.println("That is not an option!");
         }
-
     } // END main()
 
     public static void displayCalculatorMenu() {
