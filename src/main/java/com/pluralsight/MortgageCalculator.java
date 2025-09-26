@@ -16,7 +16,7 @@ public class MortgageCalculator {
         principal = keyboard.nextDouble();
          System.out.print("Please enter the interest rate: \n");
          annualInterestRate = keyboard.nextDouble();
-        // TO-DO - CREATE VARIABLE FOR INTEREST RATE FOR CALCULATION AND KEEP USER INPUT VARIABLE FOR DISPLAY MESSAGE
+        // TO-DO - CREATE VARIABLE FOR INTEREST RATE FOR CALCULATION AND KEEP USER INPUT VARIABLE FOR DISPLAY MESSAGES
         System.out.print("Please enter the loan length in years: ");
         loanLength = keyboard.nextDouble();
 
