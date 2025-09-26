@@ -6,11 +6,9 @@ public class MortgageCalculator {
     public static void main(String[] args) {
         // accept the principal, interest rate, and loan length from user
         // display expected monthly payment and total interest paid
-        double principal = 0;
+        double principal;
         double annualInterestRate = 0.07625;
-        double loanLength = 0;
-        double numMonthlyPayments = (12 * loanLength);
-        double interestRate = (annualInterestRate / 12);
+        double loanLength;
         //double monthlyPayment = principal * ((interestRate * Math.pow(1 + interestRate, numMonthlyPayments)) / (Math.pow(1 + interestRate, numMonthlyPayments) - 1));
         //double totalInterest = (monthlyPayment * numMonthlyPayments) - principal;
         Scanner keyboard = new Scanner(System.in);
@@ -25,6 +23,8 @@ public class MortgageCalculator {
         loanLength = keyboard.nextDouble();
 
         System.out.println("\nCalculating loan details...\n");
+        double numMonthlyPayments = (12 * loanLength);
+        double interestRate = (annualInterestRate / 12);
         double monthlyPayment = principal * ((interestRate * Math.pow(1 + interestRate, numMonthlyPayments)) / (Math.pow(1 + interestRate, numMonthlyPayments) - 1));
         double totalInterest = (monthlyPayment * numMonthlyPayments) - principal;
 
