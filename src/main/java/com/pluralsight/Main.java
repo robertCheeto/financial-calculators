@@ -23,8 +23,9 @@ public class Main {
             System.out.println("That is not an option!");
         }
 
-
-
+        // write code to get principal, interest rate, and years for loan?
+        // need to pass those variables into other methods() and have those methods return values
+        //
 
     } // *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN ***
 
