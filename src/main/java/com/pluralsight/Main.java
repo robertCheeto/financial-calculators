@@ -11,36 +11,30 @@ public class Main {
         int menuChoice = keyboard.nextInt();
 
         if (menuChoice == 1) {
-            MortgageCalculator();
+            mortgageCalculator();
         }
         else if (menuChoice == 2) {
-            CertificateofDeposit();
+            certificateOfDeposit();
         }
-//        else if (menuChoice == 3) {
-//            AnnuityCalculator();
-//        }
+        else if (menuChoice == 3) {
+            annuityCalculator();
+        }
         else {
             System.out.println("That is not an option!");
         }
 
-        // write code to get principal, interest rate, and years for loan?
-        // need to pass those variables into other methods() and have those methods return values
-        //
 
-    } // *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN ***
+    } // END main()
 
     public static void displayCalculatorMenu() {
         System.out.println("Choose A Calculator:");
         System.out.println("1) Mortgage Calculator");
         System.out.println("2) Certificate of Deposit (CD) Calculator");
-        //System.out.println("3) Annuity Calculator");
+        System.out.println("3) Annuity Calculator");
         System.out.print("Please enter your choice here: ");
+    } // END displayCalculatorMenu()
 
-    }
-
-    public static void MortgageCalculator() {
-        // accept the principal, interest rate, and loan length from user
-        // display expected monthly payment and total interest paid
+    public static void mortgageCalculator() {
         double principal;
         double annualInterestRateDisplay;
         double loanLength;
@@ -63,18 +57,14 @@ public class Main {
 
         System.out.printf("A loan with a principal balance of $%.2f at an interest rate of %.4f%% for %.0f years ", principal, annualInterestRateDisplay, loanLength);
         System.out.printf("would have a monthly payment of $%.2f with a total interest payment of $%.2f.", monthlyPayment, totalInterest);
+    } // END mortgageCalculator()
 
-    }
-
-    public static void CertificateofDeposit() {
-        // accept the deposit amount, interest rate, and years from user
-        // display the future value and total interest earned
+    public static void certificateOfDeposit() {
         double principal;
         double annualInterestRateDisplay;
         double years;
         int daysPerYear = 365;
         Scanner keyboard = new Scanner (System.in);
-
 
         System.out.println("*** Welcome to the CD Calculator ***\n");
         System.out.print("Please enter the principal amount: ");
@@ -93,6 +83,32 @@ public class Main {
 
         System.out.printf("\nIf you deposit $%.2f at an interest rate of %.3f%% for %.0f years...", principal, annualInterestRateDisplay, years);
         System.out.printf("\nYou your final balance would be $%.2f with an interest amount of $%.2f.", futureValue, totalInterest);
-    }
+    } // END certificateOfDeposit()
+
+    public static void annuityCalculator() {
+        double principal;
+        double annualInterestRateDisplay;
+        double annualInterestRateCalculate;
+        double years;
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("*** Welcome to the Annuity Calculator ***");
+        System.out.print("Please enter the present value of the annuity: ");
+        principal = keyboard.nextDouble();
+
+        System.out.print("Please enter the expected interest rate: ");
+        annualInterestRateDisplay = keyboard.nextDouble();
+        annualInterestRateCalculate = (annualInterestRateDisplay / 100.0);
+
+        System.out.print("Please enter the amount of years the annuity will pay out for: ");
+        years = keyboard.nextDouble();
+        double months = years / 12.0;
+
+        // annuityValue formula needs updated to show correct results
+        // TO-DO: show monthly payout amount, fix annuityValue formula, add sout/souf display messages for the end result to the user
+        double annuityValue = principal * ((1 - Math.pow(1 + annualInterestRateCalculate, (-months)) / annualInterestRateCalculate));
+        System.out.printf("The present value of the annuity is $%.2f", annuityValue);
+    } // END annuityCalculator
+
 
 }
