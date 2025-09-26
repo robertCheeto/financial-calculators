@@ -23,7 +23,6 @@ public class Main {
             System.out.println("That is not an option!");
         }
 
-
     } // END main()
 
     public static void displayCalculatorMenu() {
@@ -55,8 +54,8 @@ public class Main {
         double monthlyPayment = principal * ((interestRate * Math.pow(1 + interestRate, numMonthlyPayments)) / (Math.pow(1 + interestRate, numMonthlyPayments) - 1));
         double totalInterest = (monthlyPayment * numMonthlyPayments) - principal;
 
-        System.out.printf("A loan with a principal balance of $%.2f at an interest rate of %.4f%% for %.0f years ", principal, annualInterestRateDisplay, loanLength);
-        System.out.printf("would have a monthly payment of $%.2f with a total interest payment of $%.2f.", monthlyPayment, totalInterest);
+        System.out.printf("A loan with a principal balance of $%.2f at an interest rate of %.3f%% for %.0f years...\n******\n", principal, annualInterestRateDisplay, loanLength);
+        System.out.printf("Your Monthly Payment would be: $%.2f\nTotal Interest accrued on the payment would be: $%.2f", monthlyPayment, totalInterest);
     } // END mortgageCalculator()
 
     public static void certificateOfDeposit() {
@@ -66,7 +65,7 @@ public class Main {
         int daysPerYear = 365;
         Scanner keyboard = new Scanner (System.in);
 
-        System.out.println("*** Welcome to the CD Calculator ***\n");
+        System.out.println("\n\n*** Welcome to the CD Calculator ***\n");
         System.out.print("Please enter the principal amount: ");
         principal = keyboard.nextDouble();
 
@@ -81,8 +80,8 @@ public class Main {
         double futureValue = principal * (Math.pow(1 + (annualInterestRateCalc / daysPerYear), totalNumberOfDays));
         double totalInterest = futureValue - principal;
 
-        System.out.printf("\nIf you deposit $%.2f at an interest rate of %.3f%% for %.0f years...", principal, annualInterestRateDisplay, years);
-        System.out.printf("\nYou your final balance would be $%.2f with an interest amount of $%.2f.", futureValue, totalInterest);
+        System.out.printf("\nIf you deposit $%.2f at an interest rate of %.3f%% for %.0f years...\n******\n", principal, annualInterestRateDisplay, years);
+        System.out.printf("Your Final Balance would be: $%.2f\nTotal Interest Earned would be: $%.2f", futureValue, totalInterest);
     } // END certificateOfDeposit()
 
     public static void annuityCalculator() {
@@ -92,7 +91,7 @@ public class Main {
         double years;
         Scanner keyboard = new Scanner(System.in);
 
-        System.out.println("*** Welcome to the Annuity Calculator ***");
+        System.out.println("\n\n*** Welcome to the Annuity Calculator ***");
         System.out.print("Please enter the present value of the annuity: ");
         principal = keyboard.nextDouble();
 
