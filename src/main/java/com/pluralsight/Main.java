@@ -24,13 +24,15 @@ public class Main {
         }
 
 
-    }
+
+
+    } // *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN *** MAIN ***
 
     public static void displayCalculatorMenu() {
         System.out.println("Choose A Calculator:");
         System.out.println("1) Mortgage Calculator");
         System.out.println("2) Certificate of Deposit (CD) Calculator");
-        System.out.println("3) Annuity Calculator");
+        //System.out.println("3) Annuity Calculator");
         System.out.print("Please enter your choice here: ");
 
     }

@@ -13,6 +13,7 @@ public class CertificateOfDeposit {
         Scanner keyboard = new Scanner (System.in);
 
 
+        // ASKING FOR PRINCIPAL, INTEREST RATE, AND YEARS
         System.out.println("*** Welcome to the CD Calculator ***\n");
         System.out.print("Please enter the principal amount: ");
         principal = keyboard.nextDouble();

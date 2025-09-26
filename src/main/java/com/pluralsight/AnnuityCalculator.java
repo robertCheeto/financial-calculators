@@ -13,6 +13,7 @@ public class AnnuityCalculator {
         double years;
         Scanner keyboard = new Scanner(System.in);
 
+        // ASKING FOR PRINCIPAL, INTEREST RATE, YEARS
         System.out.println("*** Welcome to the Annuity Calculator ***");
         System.out.print("Please enter the present value of the annuity: ");
         principal = keyboard.nextDouble();

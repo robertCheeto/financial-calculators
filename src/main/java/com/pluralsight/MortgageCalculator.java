@@ -11,6 +11,7 @@ public class MortgageCalculator {
         double loanLength;
         Scanner keyboard = new Scanner(System.in);
 
+        // ASKING FOR PRINCIPAL, INTEREST RATE, YEARS
         System.out.println("*** Welcome to the Mortgage Calculator ***\n");
         System.out.print("Please enter the principal amount: ");
         principal = keyboard.nextDouble();
