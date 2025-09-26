@@ -23,5 +23,8 @@ public class CertificateOfDeposit {
         double futureValue = principal * (1 + Math.pow((annualInterestRateCalc / daysPerYear), daysPerYear * years));
 
         System.out.println();
+        // TO-DO: work on SOUT for display message
+        // check if calculations are correct
+        // determine if any other outputs are needed for CD Calc
     }
 }
